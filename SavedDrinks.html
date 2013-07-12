@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Juice Essence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet">
+	<link href="css/docs.css" rel="stylesheet">
+	 <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+	
+	<style>
+		.padder {
+			height:41px;
+			min-height:41px;
+		}
+	</style>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+	<script type="text/javascript">document.write("<style>body{display:none;}</style>");</script>
+	
+  </head>
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">@</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="http://wanyay.com/index.html#content-start" >Home <i class="icon-home icon-white"></i></a>
+              </li>
+              <li class="">
+                <a href="http://wanyay.com/index.html#content-sliders" >Customize a Drink <i class="icon-wrench icon-white"></i></a>
+              </li>
+              <li class="active">
+                <a href="/SavedDrinks.html">Drinks Saved to Our Database <i class="icon-glass icon-white"></i></a>
+              </li>
+              <li class="">
+               <a href="/BehindScenes.html">Behind the Scenes <i class="icon-facetime-video icon-white"></i></a>
+			  </li>
+              <li class="">
+                <a href="/Project.html">The Project <i class="icon-briefcase icon-white"></i></a>
+              </li>
+			  <li class="">
+                <a href="/Team.html">The Team <i class="icon-heart icon-white"></i></a>
+              </li>
+              <li class="">
+                <a href="/Files.html">Files <i class="icon-download-alt icon-white"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+<div class="container">
+<div class="well well-large">
+<div class="control-group" style="padding: 25px;">
+  <form action="save.php" method="post">
+  <center>
+  <label class="control-label" for="inputIcon"><h3>Enter Desired Percentages</h3>  </label>
+  <h4>
+ <input type="text" name="Apple" placeholder="Apple Juice %">
+  <input type="text" name="Cranberry" placeholder="Cranberry Juice %">
+   <input type="text" name="Grape" placeholder="Grape Juice %"><br>
+    <input type="text" name="Pomegranate" placeholder="Pomegranate Juice %">
+	<input type="text" name="Orange" placeholder="Orange Juice %">
+	 <input type="text" name="Water" placeholder="Water %">
+	 </h4>
+  <label class="control-label" for="inputIcon"><h4>Enter a Unique Name:</h4>  </label>
+  <input type="text" name="Name"></center>
+  <center>
+  <p>
+ <button class="btn btn-success" type="submit">Save to Database</button></a>
+  </p>
+  </center>
+  
+</div>
+</form>
+
+<button type="button" class="btn btn-warning" data-dismiss="alert" data-loading-text="Loading...">Exit</button>
+
+</div>
+</div>
+  <br><br><br><br>
+  <center>
+    <p>
+  <a href="/testmysql.php"><button class="btn" type="button">Test MySQL Connection</button></a>
+  </p>
+  </center>
+<br><br><br><br><br><br><br>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+		<a href="http://raspberrypi.org/">
+		<img src="img/raspilogo.png">
+		</a>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="http://twitter.github.io/bootstrap/">
+		<img src="img/bootlogo.png">
+		</a>
+		
+		</p>
+        <ul class="footer-links">
+ 
+        </ul>
+      </div>
+    </footer>
+
+
+   <script type='text/javascript' src="js/jquery-2.0.2.js"></script>
+  <script type='text/javascript' src="js/jquery-1.10.3.ui.js"></script>
+ 
+    <script type='text/javascript' src="js/bootstrap.js"></script>
+    <script type='text/javascript' src="js/jquery.scrollTo-min.js"></script>
+	<script type="text/javascript">
+		$("ul .nav li a").click(function(){
+			if ($(this).parent().parent().hasClass("nav")) {
+				$(this).parent().parent().children().each(function(){
+					$(this).removeClass("active");
+				});
+				$(this).parent().addClass("active");
+				}
+		});
+	
+		$(".scrollTo").click(function(e){
+			e.preventDefault();
+			var to = $(this).attr("href");
+			document.location.hash = "content-"+to.replace("#","");
+			$.scrollTo(to,1000);
+		});
+		
+		$(window).load(function(){
+			$("body").fadeIn("fast");
+		
+			var hash = document.location.hash;
+			console.log(hash);
+			if (hash.length > 0)
+				$.scrollTo(hash.replace("content-",""),1000);
+		});
+	</script>
+
+  </body>
+</html>

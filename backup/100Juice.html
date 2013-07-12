@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Percents" data-url="Percents" data-role="page" data-theme="b">
+<div data-role="header" data-theme="a">
+<h1>100% Percent Juice</h1>
+</div>
+
+<div data-role="content">
+<p><a href="http://www.wanyay.com/SeniorDesign/DrinkMaker.html" data-role="button" data-icon="home" data-theme="c"><strong>Homepage</strong></a>
+  <strong><span style="font-size: 15px;"><br></br>Below adjust the sliders to the percentage of each drink desired until the final meter reaches a glass 100% full, unless you want less, you can do that, but not more.</span></strong></p>
+<p><strong>Note: The following juices are in order by national popularity. </strong></p>
+
+<form oninput="x.value=parseInt(rng_tw25.value) + parseInt(rng_tw23.value) + parseInt(rng_tw22.value) + parseInt(rng_tw21.value) + parseInt(rng_tw20.value) + parseInt(rng_tw19.value) + parseInt(rng_tw18.value) + parseInt(rng_tw16.value)" >
+
+<h2><label for="x">Total Mix at</label>
+<output name="x" class ="slidertotal" for="rng_tw25 rng_tw23 rng_tw22 rng_tw21 rng_tw20 rng_tw19 rng_tw18 rng_tw16" >0</output><label for="x">%</label></h2>
+
+<div data-role="fieldcontain">
+  <label for="rng_tw16"><u>Orange Juice %</u></label>
+<input type="range" name="rng_tw16" id="rng_tw16" class="slider" reset="0" value="0" min="0" max="100" />
+</div>
+<div data-role="fieldcontain">
+<label for="rng_tw18"><u>Apple Juice %</u></label>
+<input type="range" name="rng_tw18" id="rng_tw18" class="slider" reset="0" value="0" min="0" max="100" />
+</div>
+<div data-role="fieldcontain">
+<label for="rng_tw19"><u>Grape Juice %</u></label>
+<input type="range" name="rng_tw19" id="rng_tw19" class="slider" reset="0" value="0" min="0" max="100" />
+</div>
+<div data-role="fieldcontain">
+<label for="rng_tw20"><u>Cranberry Juice %</u></label>
+<input type="range" name="rng_tw20" id="rng_tw20" class="slider" reset="0" value="0" min="0" max="100" />
+</div>
+<div data-role="fieldcontain">
+<label for="rng_tw21"><u>Pomegranate Juice %</u></label>
+<input type="range" name="rng_tw21" id="rng_tw21" class="slider" reset="0" value="0" min="0" max="100" />
+</div>
+<div data-role="fieldcontain">
+<label for="rng_tw22"><u>Grapefruit Juice %</u></label>
+<input type="range" name="rng_tw22" id="rng_tw22" class="slider" reset="0" value="0" min="0" max="100" />
+</div>
+<div data-role="fieldcontain">
+<label for="rng_tw23"><u>Setlzer %</u></label>
+<input type="range" name="rng_tw23" id="rng_tw23" class="slider" reset="0" value="0" min="0" max="100" />
+</div>
+<div data-role="fieldcontain">
+<label for="rng_tw25"><u>Water %</u></label>
+<input type="range" name="rng_tw25" id="rng_tw25" class="slider" reset="0" value="0" min="0" max="100" />
+</div>
+<br>
+<input type="button" class="SaveDispense" value="Save and Dispense" />
+<input type="button" class="ForgetDispense" value="Forget and Dispense" />
+<br><input type="reset" value="Reset"></br>
+
+</form>
+<br></br>
+<input type="button" value="Add Them Together" onclick="doMath();" />
+<script type="text/javascript">
+    function doMath()
+    {
+        //Capture the entered values of two input boxes
+        /*var rng_tw25 = document.getElementById('rng_tw25').value;
+        var rng_tw23 = document.getElementById('rng_tw23').value;
+		var rng_tw22 = document.getElementById('rng_tw23').value;
+		var rng_tw21 = document.getElementById('rng_tw23').value;
+		var rng_tw20 = document.getElementById('rng_tw23').value;
+		var rng_tw19 = document.getElementById('rng_tw23').value;
+		var rng_tw18 = document.getElementById('rng_tw23').value;
+		var rng_tw16 = document.getElementById('rng_tw23').value;
+		*/
+	
+		var rangeTotal = 0;
+		$(".slider").each(function(){
+			var num = parseInt($(this).val());
+			if (!isNaN(num))
+				rangeTotal += num;
+				
+		});
+		console.log(rangeTotal);
+    }
+</script>
+
+</div>
+
+<div data-role="footer" data-theme="a">
+<h1>Senior Design 2013</h1>
+</div>
+</div>
+
+  <script src="assets/js/bootstrap-alert.js"></script>
+  <script type="text/javascript">
+  //$("rng_tw25.alert").alert({value="100"});
+  
+  $('.slidertotal').live("disable", function() {
+	var $outterThis = $(this);
+	var outterTotal = 0;
+	$('.slider').each(function(){
+		if ($outterThis != $(this))
+			var num = parseInt($(this).val());
+			if (!isNaN(num))
+				outterTotal += num;
+	});
+	
+	if (outterTotal>=100)
+		$(this).addClass("uneditable-input");
+	
+	$("#x").text(outterTotal);
+  });
+  </script>
+  
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.mobile-1.1.0.min.js"></script>
+  
+</body>
+</html>

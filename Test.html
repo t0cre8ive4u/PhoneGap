@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Juice Essence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet">
+	<link href="css/docs.css" rel="stylesheet">
+	 <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+	 	 	
+	<style>
+		.padder {
+			height:41px;
+			min-height:41px;
+		}
+		#sliders {
+			list-style:none;
+			}
+			#sliders li {
+			list-style:none;
+			}
+
+	</style>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+	<script type="text/javascript">document.write("<style>body{display:none;}</style>");</script>
+	
+  </head>
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">@</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="http://wanyay.com/index.html#content-start">Home <i class="icon-home icon-white"></i></a>
+              </li>
+              <li class="">
+                <a href="http://wanyay.com/index.html#content-sliders">Customize a Drink <i class="icon-wrench icon-white"></i></a>
+              </li>
+              <li class="">
+                <a href="/SavedDrinks.html">Drinks Saved to Our Database <i class="icon-glass icon-white"></i></a>
+              </li>
+              <li class="">
+               <a href="/BehindScenes.html">Behind the Scenes <i class="icon-facetime-video icon-white"></i></a>
+			  </li>
+              <li class="">
+                <a href="/Project.html">The Project <i class="icon-briefcase icon-white"></i></a>
+              </li>
+			  <li class="">
+                <a href="/Team.html">The Team <i class="icon-heart icon-white"></i></a>
+              </li>
+              <li class="">
+                <a href="/Files.html">Files <i class="icon-download-alt icon-white"></i></a>
+              </li>
+			  <li class="active">
+                <a href="/Test.html">Test <i class="icon-gift icon-white"></i></a>
+              </li>
+  </ul>
+</div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+<div class="container">
+<div class="well well-large">
+<div class="control-group" style="padding: 100px;">
+  <label class="control-label" for="inputIcon"><h4>Drink Name:</h4>  </label>
+  <div class="controls">
+    <div class="input-prepend">
+      <span class="add-on"><i class="icon-pencil"></i></span>
+      <input class="span2" id="inputIcon" type="text">
+	  <button type="button" class="btn btn-primary" data-loading-text="Loading...">Save Mix</button>
+
+    </div>
+  </div>
+  <br><br>
+  <p>
+  <a href="/testmysql.php"><button class="btn btn-small btn-warning" type="button"><h2>Test MySQL Connection</h2></button></a>
+  </p>
+  
+</div>
+<br><br>
+<button type="button" class="btn btn-success" data-dismiss="alert" data-loading-text="Loading...">Exit</button>
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+   <script type='text/javascript' src="js/jquery-2.0.2.js"></script>
+  <script type='text/javascript' src="js/jquery-1.10.3.ui.js"></script>
+  <script type='text/javascript' src="js/jquery.mobile-1.2.0.js"></script>
+ 
+    <script type='text/javascript' src="js/bootstrap.js"></script>
+    <script type='text/javascript' src="js/jquery.scrollTo-min.js"></script>
+	
+	 <script type='text/javascript' src="js/sliders2.js"></script>
+	<!--<script type='text/javascript' src="js/sliders.js"></script>-->
+	<script type="text/javascript">
+		$(".nav li a").click(function(){
+			if ($(this).parent().parent().hasClass("nav")) {
+				$(this).parent().parent().children().each(function(){
+					$(this).removeClass("active");
+				});
+				$(this).parent().addClass("active");
+				}
+		});
+	
+		$(".scrollTo").click(function(e){
+			e.preventDefault();
+			var to = $(this).attr("href");
+			document.location.hash = "content-"+to.replace("#","");
+			$.scrollTo(to,2000);
+		});
+		
+		$(window).load(function(){
+			$("body").fadeIn("fast");
+		
+			var hash = document.location.hash;
+			console.log(hash);
+			if (hash.length > 0)
+				$.scrollTo(hash.replace("content-",""),2000);
+		});
+	</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Juice Essence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet">
+	<link href="css/docs.css" rel="stylesheet">
+	 <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+	 	 	
+	<style>
+		.padder {
+			height:41px;
+			min-height:41px;
+		}
+		#sliders {
+			list-style:none;
+			}
+			#sliders li {
+			list-style:none;
+			}
+
+	</style>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+	<script type="text/javascript">document.write("<style>body{display:none;}</style>");</script>
+	
+	<script type='text/javascript' src="js/jquery-2.0.2.js"></script>
+  <script type='text/javascript' src="js/jquery-1.10.3.ui.js"></script>
+   <script type='text/javascript' src="js/jquery.ui.touch-punch.min.js"></script>
+   
+   <script>
+$('#widget').draggable();
+</script>
+	
+  </head>
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">@</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="#start" class="scrollTo">Home <i class="icon-home icon-white"></i></a>
+              </li>
+              <li class="">
+                <a href="#sliders" class="scrollTo">Customize a Drink <i class="icon-wrench icon-white"></i></a>
+              </li>
+              <li class="">
+                <a href="/SavedDrinks.html">Drinks Saved to Our Database <i class="icon-glass icon-white"></i></a>
+              </li>
+              <li class="">
+                <a href="/Project.html">The Project <i class="icon-briefcase icon-white"></i></a>
+              </li>
+			  <li class="">
+                <a href="/Team.html">The Team <i class="icon-heart icon-white"></i></a>
+              </li>
+              <li class="">
+                <a href="https://github.com/t0cre8ive4u/JuiceEssense" target="_blank">Files <i class="icon-download-alt icon-white"></i></a>
+              </li>
+  </ul>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+	<div id="start" data-url="Start" data-role="page" data-theme="b">
+	<div class="padder hidden-phone hidden-tablet"></div>
+	<div class="jumbotron masthead">
+  <div class="container">
+    <h1>Juice Essence</h1>
+    <p>Remote. Customized. Precise. <br> A Juice Dispenser.</p>    
+    <ul class="masthead-links">
+	  <h3>What's with the name <i>Juice Essence</i>?</h3>
+	  <h5>Essense, by chemistry defiintion is a substance, usually a liquid, containing the properties of a plant or foodstuff in concentrated form.<br>
+	  Juice, in an informal manner, means percentage.  Together meaning Percentages of Juices!  <br> And from this interface you can send your requests to the beverage dispenser.</h5><br>
+	  
+	   <a href="#sliders" class="btn btn-primary btn-large anchorLink scrollTo">Get Customizing!</a><br><br>
+	  
+	  <div id="header" class="screen-only">
+	  <img src="img/download.png" width="100">
+	  <h4>Download Links:</h4>
+      <li>
+        <a href=" " onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'GitHub project']);">Android</a>
+      </li>
+      <li>
+        <a href=" " onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'Examples']);">Windows</a>
+      </li>
+      <li>
+        <a href=" " onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'Extend']);">Blackberry</a>
+      </li>
+      <li>
+        Version 0.0.1
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+		</li>
+    </ul>
+	
+	</div>
+  
+	</div>
+	
+  </div>
+  
+</div>
+
+<div id="sliders" data-url="sliders" data-role="page" data-theme="b">
+
+<center>
+
+<div class="container">
+
+  <div class="marketing">
+
+    <h1>Drinks your way!</h1>
+    <p class="marketing-byline">Below adjust to the percent per juice you desire, even save your favorite ones for next time! </p>
+	
+	
+	<center style="width:  350px; margin:  auto;">
+	<ul id="sliders">
+	<h5>Apple Juice:  </h5>
+    <li><div class="pull1">
+        <div class="slider" style="background-color: #CC3300;"></div>
+        <h5 class="formData" data-name="Apple"><span class="value" >0</span>%</h5>
+		</div>
+    </li>
+	<h5>Cranberry Juice:</h5>
+    <li><div class="pull2">
+        <div class="slider" style="background-color: #990033;"></div>
+        <h5 class="formData" data-name="Cranberry"><span class="value" >0</span>%</h5>
+		</div>
+    </li>
+	<h5>Grape Juice:</h5>
+    <li><div class="pull3">
+        <div class="slider" style="background-color: #330066;"></div>
+        <h5 class="formData" data-name="Grape"><span class="value">0</span>%</h5>
+		</div>
+    </li>
+		<h5>Pomegranate Juice:</h5>
+    <li><div class="pull5">
+        <div class="slider" style="background-color: #660066;"></div>
+        <h5 class="formData" data-name="Pomegranate"><span class="value">0</span>%</h5>
+		</div>
+    </li>
+	<h5>Orange Juice:</h5>
+    <li><div class="pull4">
+        <div class="slider" style="background-color: #FF9900;"></div>
+        <h5 class="formData" data-name="Orange"><span class="value">0</span>%</h5>
+		</div>
+    </li>
+
+</ul>
+
+	<h3>Total:  <span id="total">0</span>%</h3>
+	
+<div class="btn-toolbar">
+<div class="btn-group"> 
+<a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal">Submit</a>
+<input type="reset" class="btn btn-danger" alt="Reset" type="Reset" value="Reset">
+<a href="#myModal2" role="button" class="btn btn-success" data-toggle="modal">Save</a>
+</div>
+
+</div>
+
+	<center>
+	<a href="#start" class="btn btn-inverse btn-large anchorLink scrollTo">Back to the top!</a>
+	</center>
+ 
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+  <div class="modal-header" style="
+  
+  background: #499bea; /* Old browsers */
+background: -moz-linear-gradient(top, #499bea 0%, #207ce5 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#499bea), color-stop(100%,#207ce5)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #499bea 0%,#207ce5 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #499bea 0%,#207ce5 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #499bea 0%,#207ce5 100%); /* IE10+ */
+background: linear-gradient(to bottom, #499bea 0%,#207ce5 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5',GradientType=0 ); /* IE6-9 */
+  
+  ">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel" style="color:  white">Dispense Beverage</h3>
+  </div>
+  
+  <div class="modal-body">
+  <label class="control-label" for="inputIcon"><h4><b>Enter your initials below:</b></h4>  </label>
+  <input type="text" name="Name"><br>
+  <button id="drinksubmit" class="btn btn-success" type="submit" data-dismiss="modal" aria-hidden="true">Submit</button>
+  </center>
+  
+  </div>
+  
+  <!-- Modal 2 -->
+<div id="myModal2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+  <div class="modal-header" style="
+  
+    background: #499bea; /* Old browsers */
+background: -moz-linear-gradient(top, #499bea 0%, #207ce5 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#499bea), color-stop(100%,#207ce5)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #499bea 0%,#207ce5 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #499bea 0%,#207ce5 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #499bea 0%,#207ce5 100%); /* IE10+ */
+background: linear-gradient(to bottom, #499bea 0%,#207ce5 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5',GradientType=0 ); /* IE6-9 */
+  
+  ">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel" style="color:  white">Save and Dispense</h3>
+  </div>
+  
+  <div class="modal-body">
+  <label class="control-label" for="inputIcon"><h4>Enter a unique drink name below:</h4>  </label>
+  <input type="text" name="Name"><br>
+  <button id="drinksave" class="btn btn-success" type="submit" data-dismiss="modal" aria-hidden="true">Save</button>
+  </center>
+  </div>
+
+	
+
+  </div>
+  
+</div>
+
+</center>
+
+</div>
+
+
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+		<a href="http://raspberrypi.org/">
+		<img src="img/raspilogo.png">
+		</a>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="http://twitter.github.io/bootstrap/">
+		<img src="img/bootlogo.png">
+		</a>
+		
+		</p>
+        <ul class="footer-links">
+ 
+        </ul>
+      </div>
+    </footer>
+
+	  
+	
+   
+   
+  <script type='text/javascript' src="js/jquery.mobile-1.2.0.js"></script>
+ 
+    <script type='text/javascript' src="js/bootstrap.js"></script>
+    <script type='text/javascript' src="js/jquery.scrollTo-min.js"></script>
+	
+	 <script type='text/javascript' src="js/sliders2.js"></script>
+	<!--<script type='text/javascript' src="js/sliders.js"></script>-->
+	<script type="text/javascript">
+		$(".nav li a").click(function(){
+			if ($(this).parent().parent().hasClass("nav")) {
+				$(this).parent().parent().children().each(function(){
+					$(this).removeClass("active");
+				});
+				$(this).parent().addClass("active");
+				}
+		});
+	
+		$(".scrollTo").click(function(e){
+			e.preventDefault();
+			var to = $(this).attr("href");
+			document.location.hash = "content-"+to.replace("#","");
+			$.scrollTo(to,2000);
+		});
+		
+		$(window).load(function(){
+			$("body").fadeIn("fast");
+		
+			var hash = document.location.hash;
+			console.log(hash);
+			if (hash.length > 0)
+				$.scrollTo(hash.replace("content-",""),2000);
+		});
+		
+		//save to queue database
+		$("#drinksubmit").click(function(){
+			var formData = "";
+			$(".formData").each(function(){
+				formData+=  $(this).attr("data-name")+":"+$(this).text().replace("%","")+",";
+			});
+			
+			formData = formData.substring(0,formData.length-1); //correct the last comma
+			
+			$.post("insert.php",{'formData':formData,'programic':true}, function(data) {
+				if (data != "FAIL")
+					alert("drink queued: "+data);
+			});
+		});
+		
+				//save to saved database
+		$("#drinksave").click(function(){
+			var formData = "";
+			$(".formData").each(function(){
+				formData+=  $(this).attr("data-name")+":"+$(this).text().replace("%","")+",";
+			});
+			
+			formData = formData.substring(0,formData.length-1); //correct the last comma
+			
+			$.post("save.php",{'formData':formData,'programic':true}, function(data) {
+				if (data != "FAIL")
+					alert("drink queued: "+data);
+			});
+		});
+	</script>
+
+
+  </body>
+</html>
