@@ -57,7 +57,7 @@ $('#widget').draggable();
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="./index.html">@</a>
+          <a class="brand" href="http://www.wanyay.com/index.html">@</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active">
@@ -67,13 +67,13 @@ $('#widget').draggable();
                 <a href="#sliders" class="scrollTo">Customize a Drink <i class="icon-wrench icon-white"></i></a>
               </li>
               <li class="">
-                <a href="/SavedDrinks.html">Drinks Saved to Our Database <i class="icon-glass icon-white"></i></a>
+                <a href="http://www.wanyay.com/SavedDrinks.html">Drinks Saved to Our Database <i class="icon-glass icon-white"></i></a>
               </li>
               <li class="">
-                <a href="/Project.html">The Project <i class="icon-briefcase icon-white"></i></a>
+                <a href="http://www.wanyay.com/Project.html">The Project <i class="icon-briefcase icon-white"></i></a>
               </li>
 			  <li class="">
-                <a href="/Team.html">The Team <i class="icon-heart icon-white"></i></a>
+                <a href="http://www.wanyay.com/Team.html">The Team <i class="icon-heart icon-white"></i></a>
               </li>
               <li class="">
                 <a href="https://github.com/t0cre8ive4u/JuiceEssense" target="_blank">Files <i class="icon-download-alt icon-white"></i></a>
@@ -91,23 +91,18 @@ $('#widget').draggable();
     <h1>Juice Essence</h1>
     <p>Remote. Customized. Precise. <br> A Juice Dispenser.</p>    
     <ul class="masthead-links">
-	  <h3>What's with the name <i>Juice Essence</i>?</h3>
-	  <h5>Essense, by chemistry defiintion is a substance, usually a liquid, containing the properties of a plant or foodstuff in concentrated form.<br>
-	  Juice, in an informal manner, means percentage.  Together meaning Percentages of Juices!  <br> And from this interface you can send your requests to the beverage dispenser.</h5><br>
-	  
+	<h3><i>Being served to you by:  The Drink Mixer 5000</i></h3>
+	  <br><br>
 	   <a href="#sliders" class="btn btn-primary btn-large anchorLink scrollTo">Get Customizing!</a><br><br>
-	  
+	  <br><br>
 	  <div id="header" class="screen-only">
-	  <img src="img/download.png" width="100">
+	  <img src="img/chart.png" width="125">
 	  <h4>Download Links:</h4>
       <li>
-        <a href=" " onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'GitHub project']);">Android</a>
+        <a href="https://build.phonegap.com/apps/469317/download/android" onclick="">Android</a>
       </li>
       <li>
-        <a href=" " onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'Examples']);">Windows</a>
-      </li>
-      <li>
-        <a href=" " onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'Extend']);">Blackberry</a>
+        <a href="https://build.phonegap.com/apps/469317/download/winphone" onclick="">Windows</a>
       </li>
       <li>
         Version 0.0.1
@@ -319,7 +314,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', end
 			
 			formData = formData.substring(0,formData.length-1); //correct the last comma
 			
-			$.post("insert.php",{'formData':formData,'programic':true}, function(data) {
+			$.post("http://www.wanyay.com/insert.php",{'formData':formData,'programic':true}, function(data) {
 				if (data != "FAIL")
 					alert("drink queued: "+data);
 			});
@@ -334,7 +329,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', end
 			
 			formData = formData.substring(0,formData.length-1); //correct the last comma
 			
-			$.post("save.php",{'formData':formData,'programic':true}, function(data) {
+			$.post("http://www.wanyay.com/save.php",{'formData':formData,'programic':true}, function(data) {
 				if (data != "FAIL")
 					alert("drink queued: "+data);
 			});
